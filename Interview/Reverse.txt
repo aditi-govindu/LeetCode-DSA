@@ -1,0 +1,22 @@
+#include <iostream>
+#include <cstdlib>
+
+using namespace std;
+
+class Solution 
+{
+public:
+    int reverse(int x) 
+    {
+        int digit = 0;
+        int count = 0;
+        int rev = 0;
+        while(abs(x) != 0)
+        {
+            digit = x % 10;
+            rev = rev*10 + digit;
+            x = x / 10;
+        }
+        return rev;
+    }
+};
